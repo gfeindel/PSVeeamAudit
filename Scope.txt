@@ -1,0 +1,18 @@
+We are creating a tool that audits Veeam backup job configurations against a known good configuration.
+
+Paramaters (included)
+
+Backup Jobs
+
+Job Name Convension
+Schedule
+Restore Points
+Repository 
+Compression level
+Storage Optimization
+Notifications
+Backup Proxy
+Guest Interaction Proxy
+
+Task (GF): Define what the known good configuration?
+Task: (SH)How do we query what each of the above is?
