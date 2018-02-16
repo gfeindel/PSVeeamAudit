@@ -55,6 +55,7 @@
 
         # Veeam setting: \Storage\Compression level
         # Values: None|DedupeFriendly|Optimal|High|Extreme
+        # API: BackupStorageOptions.CompressionLevel
         CompressionLevel = ""
 
         # Veeam setting: \Storage\Storage optimization
