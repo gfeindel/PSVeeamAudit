@@ -1,8 +1,15 @@
 # PSVeeamAudit
-The PSVeeamAudit project is a humble attempt to avoid backup configuration drift in Veeam. Have you ever modified a backup job during troubleshooting and forgot to correct the change? Backup job configuration drift can lead to violated SLAs and data loss. 
+
+PSVeeamAudit is a DSC resource for Veeam backup job management. Have you ever modified a backup job during troubleshooting and forgot to correct the change? Backup job configuration drift can lead to violated SLAs and data loss. This DSC resource allows you to define your jobs once and make sure they stay that way!
+
+This is also a just-for-fun project between a few Freudenberg sysadmins to learn DSC and foster collaboration.
 
 ## How it works
-PSVeeamAudit consists of an auditing script and templates. Templates define correct job configurations. Templates include common parameters such as job name convention, scheduling, and retention. The audit script compares real job configurations against the template. This concept applies equally well for any backup product. We are focused on Veeam, because we use Veeam. In the future, we hope this project expands to include other backup products, too.
 
-## PSVeeamAudit and DSC
-You might think, "This sounds like DSC for Veeam." You'd be right. We hope to get there. This is a first attempt and learning experience on the way to a Veeam DSC resource that will benefit the entire IT community!
+More to come here.
+
+## Some useful resources
+
+These resources have been very helpful in the design and development of this DSC resource.
+[Write Resource Functions for DSC](https://blogs.technet.microsoft.com/heyscriptingguy/2015/05/12/write-targetresource-functions-for-powershell-dsc/)
+[Authoring Resources](https://docs.microsoft.com/en-us/powershell/dsc/authoringresource)
