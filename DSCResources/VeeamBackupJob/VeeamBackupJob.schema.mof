@@ -1,0 +1,15 @@
+[ClassVersion("0.1.0"), FriendlyName("VeeamBackupJob")]
+class VeeamBackupJobResource : OMI_BaseResource
+{
+  [Key] string JobName;
+  [write,ValueMap{"Present", "Absent"},Values{"Present", "Absent"}] string Ensure;
+  [write,ValueMap{"Enabled","Disabled"},Values{"Enabled", "Disabled"}] string State;
+  [write,ValueMap{"None","Daily","Monthly","Periodic","Continuous"}] string Frequency;
+  // [write] string BackupRepositoryName;
+  // [write, ValueMap{"Incremental","ReverseIncremental"}] BackupMode;
+
+  [write, ValueMap{"None","DedupeFriendly","Optimal","High","Extreme"}] string CompressionLevel;
+  // [write] string NotificationRecipients[];
+
+  // Todo: Add more properties, incl read properties for reporting only.
+};

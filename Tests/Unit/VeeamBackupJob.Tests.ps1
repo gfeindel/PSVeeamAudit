@@ -6,14 +6,18 @@ $sut = $sut -replace 'ps1','psm1'
 
 Import-Module "$here\$sut" -Force
 
-Describe "VeeamBackup" {
+# Setup scaffolding and stub out dependencies.
+
+Describe "VeeamBackupJob" {
     Context 'Get-TargetResource' {
         It "Returns false if the provided job does not exist" {
             Get-TargetResource -JobName "Bogus job" | Should be $false
         }
+        It "Detects the Daily schedule." {}
+        It "Detects the Monthly schedule." {}
+        It "Detects the Periodic schedule." {}
+        It "Detects the Continuous schedule." {}
     }
-    Context "Set-TargetResource" {
-    }
-    Context "Test-TargetResource" {
-    }
+    Context "Set-TargetResource" {}
+    Context "Test-TargetResource" {}
 }
